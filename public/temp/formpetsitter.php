@@ -13,9 +13,7 @@ include 'inc/nav.inc.php';
                     <h1>Devenir PetSitter </h1>
                     <p></p>
                     <hr>
-                    
-
-
+ 
                     <label for="nom">Nom </label>
                     <input type="text" id="nom" name="nom" placeholder="Votre Nom" >
 
@@ -25,10 +23,12 @@ include 'inc/nav.inc.php';
                     <label for="cd">Code Postale</label>
                     <input type="number" id="cd" name="cd" placeholder="Votre code postale">
 
+                    <label for="ville">ville</label>
+                    <input type="number" id="ville" name="ville" placeholder="Votre ville...">
+
                     <label for="date">Date de Naissance</label>
                     <input type="date" id="date" name="date" placeholder="Votre Date de naisssance">
                     <br>
-                    
 
 
                     <label for="email">Email</label>
@@ -47,8 +47,8 @@ include 'inc/nav.inc.php';
                     </label>
                     
                 <div class="btnflex">
-                    <button type="submit" class="connexionbtn">C'est parti!</button>
-                    <button type="submit" class="connexionbtn">Annuler</button>
+                    <button type="submit" class="connexionbtn"><a href="profilcreatannonce.php"> C'est parti!</a></button>
+                    <button type="submit" class="connexionbtn"><a href="indx.php"> Annuler </a></button>
                 </div>
 
             </form>

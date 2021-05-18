@@ -1,9 +1,10 @@
-{% extends 'base.html.twig' %}
+<?php
 
-{% block title %}Petbuddy - Accueil{% endblock %}
-
-{% block body %}
-  <!-- header -->
+include 'inc/header.inc.php';
+include 'inc/nav.inc.php';
+?>
+  
+       <!-- header -->
       <header style="background-image: url('img/bg.jpg');">
             <div id="localisationTab">
               <p>Trouver le Petbuddy le plus proche de chez vous...</p>
@@ -103,4 +104,5 @@
               <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
       </div>
-{% endblock %}
+
+<?php include 'inc/footer.inc.php';

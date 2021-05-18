@@ -5,9 +5,9 @@ include 'inc/nav.inc.php';
 
 ?>
 
-<div class="contact">
+<div class="formcontainer">
 
-    <div class="formcontact">
+    <div class="form">
       <form action="action_page.php">
 
         <label for="nom">Nom </label>
