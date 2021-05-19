@@ -41,7 +41,7 @@ class Announces
     private $animalType;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
+     * @ORM\Column(type="string", length=255)
      */
     private $weight;
 
@@ -143,12 +143,12 @@ class Announces
         return $this;
     }
 
-    public function getWeight(): ?int
+    public function getWeight(): ?string
     {
         return $this->weight;
     }
 
-    public function setWeight(?int $weight): self
+    public function setWeight(?string $weight): self
     {
         $this->weight = $weight;
 
