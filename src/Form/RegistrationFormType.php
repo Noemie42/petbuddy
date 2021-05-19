@@ -29,7 +29,7 @@ class RegistrationFormType extends AbstractType
             ->add('email', EmailType::class)
             ->add('firstName', TextType::class)
             ->add('lastName', TextType::class)
-            ->add('roles', EmailType::class)
+            // ->add('roles', EmailType::class)
             ->add('birthDate', BirthdayType::class, [
                  'widget' => 'single_text'
             ])

@@ -7,42 +7,42 @@
         <div class="alert alert-danger" role="alert">{{ flashError }}</div>
     {% endfor %}
 
-    <h1>Register</h1>
+    <div class="connexion">
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email, {
-            label: 'Email'
-        }) }}
-        {{ form_row(registrationForm.firstName, {
-            label: 'Prénom'
-        }) }}
-        {{ form_row(registrationForm.lastName, {
-            label: 'Nom'
-        }) }}
-        {# {{ form_row(registrationForm.roles, {
-            label: 'status'
-        }) }} #}
-        {{ form_row(registrationForm.birthDate, {
-            label: 'Date de Naissance'
-        }) }}
-        {{ form_row(registrationForm.city, {
-            label: 'Ville'
-        }) }}
-        {{ form_row(registrationForm.zipCode, {
-            label: 'Code Postal'
-        }) }}
-        {{ form_row(registrationForm.animalType, {
-            label: 'Type d\'animal'
-        }) }}
-        {# {{ form_row(registrationForm.reservationAt, {
-            label: 'Date de Reservation'
-        }) }} #}
-        {{ form_row(registrationForm.password, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
-        {{ form_row(registrationForm.rgpd) }}
+        <h1>S'inscrire pour faire garder son animal</h1>
 
-        <button type="submit" class="btn">Register</button>
-    {{ form_end(registrationForm) }}
+        {{ form_start(registrationForm) }}
+            {{ form_row(registrationForm.email, {
+                label: 'Email'
+            }) }}
+            {{ form_row(registrationForm.firstName, {
+                label: 'Prénom'
+            }) }}
+            {{ form_row(registrationForm.lastName, {
+                label: 'Nom'
+            }) }}
+
+            {{ form_row(registrationForm.birthDate, {
+                label: 'Date de Naissance'
+            }) }}
+            {{ form_row(registrationForm.city, {
+                label: 'Ville'
+            }) }}
+            {{ form_row(registrationForm.zipCode, {
+                label: 'Code Postal'
+            }) }}
+            {{ form_row(registrationForm.animalType, {
+                label: 'Type d\'animal'
+            }) }}
+    
+            {{ form_row(registrationForm.password, {
+                label: 'Password'
+            }) }}
+            {{ form_row(registrationForm.agreeTerms) }}
+            {{ form_row(registrationForm.rgpd) }}
+
+            <button type="submit" class="connexionbtn">Register</button>
+        {{ form_end(registrationForm) }}
+
+    </div>
 {% endblock %}
