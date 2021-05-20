@@ -13,29 +13,45 @@
     
     <h1> Ajouter un Membre </h1> 
 
-    {{ form_start(formContactMessage)}}
+    {{ form_start(formUsers)}}
         <div class="row">
-            {{form_label(formContactMessage.users, 'Id utilisateurs')}}
-            {{form_widget(formContactMessage.users )}}
+            {{form_label(formUsers.firstName, 'Prénom')}}
+            {{form_widget(formUsers.firstName )}}
         </div>
         <div class="row">
-            {{form_label(formContactMessage.announces, 'Id annonces')}}
-            {{form_widget(formContactMessage.announces)}}
+            {{form_label(formUsers.lastName, 'Nom')}}
+            {{form_widget(formUsers.lastName)}}
         </div>
         <div class="row">
-            {{form_label(formContactMessage.message, 'Message')}}
-            {{form_widget(formContactMessage.message)}}
+            {{form_label(formUsers.email, 'Email')}}
+            {{form_widget(formUsers.email)}}
         </div>
         <div class="row">
-            {{form_label(formContactMessage.animalType, 'Type d\'animal')}}
-            {{form_widget(formContactMessage.animalType)}}
+            {{form_label(formUsers.password, 'Mot de Passe')}}
+            {{form_widget(formUsers.password)}}
         </div>
         <div class="row">
-            {{form_label(formContactMessage.agreeTerms)}}
-            {{form_widget(formContactMessage.agreeTerms)}}
+            {{form_label(formUsers.city, 'City')}}
+            {{form_widget(formUsers.city)}}
+        </div>
         <div class="row">
-            {{form_label(formContactMessage.rgpd)}}
-            {{form_widget(formContactMessage.rgpd)}}
+            {{form_label(formUsers.zipCode, 'Code Postal')}}
+            {{form_widget(formUsers.zipCode)}}
+        </div>
+        <div class="row">
+            {{form_label(formUsers.birthDate, 'Date de Naissance')}}
+            {{form_widget(formUsers.birthDate)}}
+        </div>
+        <div class="row">
+            {{form_label(formUsers.animalType, 'Type d\'animal')}}
+            {{form_widget(formUsers.animalType)}}
+        </div>
+        <div class="row">
+            {{form_label(formUsers.agreeTerms)}}
+            {{form_widget(formUsers.agreeTerms)}}
+        <div class="row">
+            {{form_label(formUsers.rgpd)}}
+            {{form_widget(formUsers.rgpd)}}
         </div>
         <br>
         <button type="submit" class="btn btn-success btn-sm mb-1">Enregistrer</button>

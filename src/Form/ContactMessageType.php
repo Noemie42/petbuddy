@@ -3,8 +3,9 @@
 namespace App\Form;
 
 use App\Entity\ContactMessage;
-//use App\Entity\Users;
 use App\Entity\Announces;
+use App\Entity\Users;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -16,9 +17,10 @@ class ContactMessageType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('users', Users::class, [
+            ->add('users', EntityType::class, [
                 'class'=>Users::class,
-                'choice_label' => 'id'
+                'choice_label' => 'id',
+                'mapped' => false
             ])
             ->add('message', TextareaType::class)
             //->add('contactAt')
@@ -29,9 +31,12 @@ class ContactMessageType extends AbstractType
                 'Oiseau' => 'Bird'
             ],
         ])
-            ->add('announces', Announces::class, [
+            ->add('announces', EntityType::class, [
             'class' => Announces::class,
             'choice_label' => 'id'
+            //'mapped' => false
+            
+            
         ])
         ;
     }

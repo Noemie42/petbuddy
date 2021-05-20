@@ -247,7 +247,7 @@ class Announces
         return $this->contactMessages;
     }
 
-    public function addContactMessage(ContactMessage $contactMessage): self
+    public function addContactMessages(ContactMessage $contactMessage): self
     {
         if (!$this->contactMessages->contains($contactMessage)) {
             $this->contactMessages[] = $contactMessage;
@@ -257,7 +257,7 @@ class Announces
         return $this;
     }
 
-    public function removeContactMessage(ContactMessage $contactMessage): self
+    public function removeContactMessages(ContactMessage $contactMessage): self
     {
         if ($this->contactMessages->removeElement($contactMessage)) {
             // set the owning side to null (unless already changed)

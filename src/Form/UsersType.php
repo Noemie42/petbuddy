@@ -7,7 +7,6 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
@@ -50,7 +49,10 @@ class UsersType extends AbstractType
             ])
             ->add('city', TextType::class)
             ->add('zipCode', IntegerType::class)
-            ->add('birthDate', BirthdayType::class)
+            ->add('birthDate', BirthdayType:: class, [
+                  'widget' => 'single_text'
+
+            ])
             ->add( 'animalType', ChoiceType::class, [
             'choices' => [
                 'Chien' => 'Dog',

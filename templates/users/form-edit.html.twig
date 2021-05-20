@@ -4,21 +4,17 @@
 
 {% block body %}
 
-{% if app.user %}
-  {{ dump(app.user.username) }}
-{% endif %}
+    {% if app.user %}
+    {{ dump(app.user.username) }}
+    {% endif %}
 
-{% for message in app.flashes('users_edit_success') %}
-<div class="alert alert-success" role="alert">
-  Congratulation!! {{ message }}
-</div>
-{% endfor %}
-{% for message in app.flashes('users_delete_success') %}
-<div class="alert alert-success" role="alert">
-  Congratulation!! {{ message }}
-</div>
+    {% for message in app.flashes('users_edit_success') %}
+    <div class="alert alert-success" role="alert">
+    Congratulation!! {{ message }}
+    </div>
+    {% endfor %}
 
-<h1> Modifier un Membre</h1> 
+    <h1> Modifier un Membre</h1> 
 
     {{ form_start(formUsers)}}
         <div class="row">
