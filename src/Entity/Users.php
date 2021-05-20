@@ -64,7 +64,7 @@ class Users implements UserInterface
     private $zipCode;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="string", length=100)
      */
     private $birthDate;
 
@@ -133,7 +133,7 @@ class Users implements UserInterface
     {
         $roles = $this->roles;
         // guarantee every user at least has ROLE_USER
-        $roles[] = 'ROLE_USER';
+        $roles[] = 'ROLE_TRAVELERS';
 
         return array_unique($roles);
     }
@@ -240,12 +240,12 @@ class Users implements UserInterface
         return $this;
     }
 
-    public function getBirthDate(): ?\DateTimeInterface
+    public function getBirthDate(): ?string
     {
         return $this->birthDate;
     }
 
-    public function setBirthDate(\DateTimeInterface $birthDate): self
+    public function setBirthDate(?string $birthDate): self
     {
         $this->birthDate = $birthDate;
 
