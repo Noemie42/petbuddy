@@ -4,7 +4,8 @@
 
 {% block body %}
     <div class="imgbckg">
-        <img src="img/petcare.png" alt="petwow" class="responsive">
+        <img src="{{ asset('img2/petcare.png') }}" alt="petwow" class="responsive">
+        
     </div>
     <div class="faq">
 
@@ -53,29 +54,29 @@
 
 
     <div class="contact">
-    <hr>
-    <h1>Formulaire de contact</h1><br><br><hr>
+        <hr>
+        <h1>Formulaire de contact</h1><br><br><hr>
         <!-- input nom -->
         <div class="formcontainer">
 
-        <div class="form">
-        <form action="action_page.php">
+            <div class="form">
+                <form action="action_page.php">
 
-            <label for="nom">Votre nom </label>
-            <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+                    <label for="nom">Votre nom </label>
+                    <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
 
-            <label for="prenom">Votre prénom</label>
-            <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
+                    <label for="prenom">Votre prénom</label>
+                    <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
 
 
-            <label for="message">Votre messsage</label>
-            <textarea id="message" name="message" placeholder="Message" style="height:200px" required></textarea>
-            
+                    <label for="message">Votre messsage</label>
+                    <textarea id="message" name="message" placeholder="Message" style="height:200px" required></textarea>
+                    
 
-            <button type="submit" class="btn"><a href="profil.php"> Envoyer  </a></button><br><br><br>
-            <!-- <a href="profil.php"><button type="submit" value="Submit">Envoyer</button></a> -->
+                    <button type="submit" class="btn"><a href="indx.php"> Envoyer  </a></button><br><br><br>
 
-        </form>
+                </form>
+            </div>
         </div>
     </div>
 

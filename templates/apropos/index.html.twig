@@ -1,14 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AproposController!{% endblock %}
-
 {% block body %}
 <div class="titleaPropos">
     <h1>À propos de Petbuddy</h1><br><br>
     
     <h2>Fondée en 2021, Petbuddy est un site de garde d'animaux <br> par des pet-sitters dignes de confiance.</h2><br><br>
 
-    <img src="img/familypet.png" alt="pets" class="responsive"><br><br>
+    <img src="{{ asset('img2/familypet.png') }}" alt="pets" class="responsive"><br><br>
+    
 </div>
 <div class="aproposMid">
 
@@ -24,10 +23,5 @@
 
     <p><u>Les solutions sont multiples et nous sommes là pour ça !</u></p>
 
-    <br><br><br><br><hr><br><br>
-
-    <h1>Les créateurs de Petbuddy</h1>
-
-    <br>
-    <br>
+    <br><br><br><br>
 {% endblock %}
